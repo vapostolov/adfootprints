@@ -1,0 +1,34 @@
+{
+  "name": "adfootprints",
+  "description": "adfootprints",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "eslint": "*",
+    "forever": "*",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "*",
+    "gulp-istanbul": "*",
+    "gulp-load-plugins": "*",
+    "gulp-mocha": "*",
+    "gulp-plumber": "*",
+    "gulp-using": "*",
+    "minimist": "*",
+    "rimraf": "*",
+    "run-sequence": "*",
+    "tail": "*",
+    "touch": "*"
+  },
+  "dependencies": {
+    "express": "*",
+    "request": "*",
+    "mongodb": "*",
+    "ipware": "*",
+    "express-mongo-db": "*",
+    "mongoose": "*",
+    "jsonapify": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "jsend": "*"
+  }
+}
