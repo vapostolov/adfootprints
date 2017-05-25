@@ -32,7 +32,7 @@ gulp.task('build-web', function (callback) {
 
 gulp.task('build', function (callback) {
     runSequence(
-        server.buildTasks, web.buildTasks, callback
+        server.buildTasks,/* web.buildTasks,*/ callback
     );
 });
 
