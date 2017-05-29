@@ -18,7 +18,9 @@
     "run-sequence": "*",
     "tail": "*",
     "touch": "*",
-    "forever-win": "*"
+    "forever-win": "*",
+    "babel-register": "*",
+    "webpack": "*"
   },
   "dependencies": {
     "express": "*",
