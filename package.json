@@ -17,7 +17,8 @@
     "rimraf": "*",
     "run-sequence": "*",
     "tail": "*",
-    "touch": "*"
+    "touch": "*",
+    "forever-win": "*"
   },
   "dependencies": {
     "express": "*",

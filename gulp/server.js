@@ -27,7 +27,8 @@ exports.testTasks = [];
 
 var exec = require('child_process').exec, child;
 function execute(operation, callback) {
-    child = exec('./node_modules/.bin/forever ' + operation + ' -o ' + logFile + ' -e ' + errFile + ' ./server/single.js' + (global.developmentMode ? ' --development' : ''), function (error, stdout, stderr) {
+    // https://stackoverflow.com/a/25914705/6376260
+    child = exec((/^win/.test(process.platform) ? '' : './node_modules/.bin/') + 'forever ' + operation + ' -o ' + logFile + ' -e ' + errFile + ' ./server/single.js' + (global.developmentMode ? ' --development' : ''), function (error, stdout, stderr) {
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
         if (error !== null) {
