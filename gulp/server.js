@@ -1,8 +1,18 @@
 var gulp = global.gulp;
 
+var fs = require('fs');
+var touch = require("touch");
 var Tail = require('tail').Tail;
 var logFile = 'forever.log';
 var errFile = 'forever.err';
+
+if (!fs.existsSync(logFile)) {
+    touch.sync(logFile/*, options*/);
+}
+
+if (!fs.existsSync(errFile)) {
+    touch.sync(errFile/*, options*/);
+}
 
 gulp.task('server-lint', function () {
     return gulp.src('./server/*.js')
