@@ -20,7 +20,8 @@
     "touch": "*",
     "forever-win": "*",
     "babel-register": "*",
-    "webpack": "*"
+    "webpack": "*",
+    "co-express": "*"
   },
   "dependencies": {
     "express": "*",
@@ -32,6 +33,8 @@
     "jsonapify": "*",
     "body-parser": "*",
     "cors": "*",
-    "jsend": "*"
+    "jsend": "*",
+    "require-dir": "*",
+    "change-case": "*"
   }
 }
