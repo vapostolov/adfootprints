@@ -10,6 +10,7 @@ const cors = require('cors');
 const process = require('process');
 const mongoose = require('mongoose');
 const server = express();
+var Sequelize = require('sequelize');
 
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(bodyParser.json());
@@ -19,6 +20,27 @@ server.use((req, res, next) => {
 });
 
 const db = mongoose.connect('mongodb://localhost');
+
+const sequelize = new Sequelize('pickleAFP', 'root', '', {
+    host: 'localhost',
+    dialect: 'mysql',
+
+    pool: {
+        max: 5,
+        min: 0,
+        idle: 10000
+    },
+
+});
+
+sequelize
+    .authenticate()
+    .then(() => {
+        console.log('Connection has been established successfully.');
+    })
+    .catch(err => {
+        console.error('Unable to connect to the database:', err);
+    });
 
 //support for cross origin requests
 server.use(cors({

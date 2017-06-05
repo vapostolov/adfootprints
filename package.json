@@ -24,17 +24,20 @@
     "co-express": "*"
   },
   "dependencies": {
-    "express": "*",
-    "request": "*",
-    "mongodb": "*",
-    "ipware": "*",
-    "express-mongo-db": "*",
-    "mongoose": "*",
-    "jsonapify": "*",
     "body-parser": "*",
+    "change-case": "*",
     "cors": "*",
+    "express": "*",
+    "express-mongo-db": "*",
+    "ipware": "*",
     "jsend": "*",
+    "jsonapify": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "mysql2": "^1.3.2",
+    "request": "*",
     "require-dir": "*",
-    "change-case": "*"
+    "sequelize": "*",
+    "mysql": "*"
   }
 }
